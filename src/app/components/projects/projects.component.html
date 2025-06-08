@@ -1,0 +1,23 @@
+<div class="text-center">
+  <h2 class="fw-bold">Proyectos Destacados</h2>
+  <hr class="w-25 mx-auto">
+</div>
+
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-3">
+  <div class="col" *ngFor="let project of projects">
+    <div class="card h-100 shadow-sm">
+      <img [src]="project.image" class="card-img-top" [alt]="project.title">
+      <div class="card-body">
+        <h5 class="card-title">{{ project.title }}</h5>
+        <p class="card-text">{{ project.description }}</p>
+        <div>
+          <span *ngFor="let tag of project.tags" class="badge bg-secondary me-1 mb-1">{{ tag }}</span>
+        </div>
+      </div>
+      <div class="card-footer bg-white border-top-0">
+        <a [href]="project.githubUrl" target="_blank" class="btn btn-dark me-2">GitHub</a>
+        <a *ngIf="project.liveUrl" [href]="project.liveUrl" target="_blank" class="btn btn-primary">Demo en Vivo</a>
+      </div>
+    </div>
+  </div>
+</div>
