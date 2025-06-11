@@ -1,0 +1,17 @@
+#projectCarousel {
+  // Añade un poco de espacio vertical para que las tarjetas no se sientan apretadas
+  .carousel-item {
+    padding: 2rem 0;
+  }
+
+  // Mejora la visibilidad de los controles de navegación
+  .carousel-control-prev,
+  .carousel-control-next {
+    // Añade un fondo sutil para que los iconos siempre sean visibles
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 5%; // Reduce el ancho del área de clic
+    border-radius: 8px;
+    margin: auto 0.5rem; // Centra verticalmente y añade un pequeño margen
+    height: 100px;
+  }
+}
